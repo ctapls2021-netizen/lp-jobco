@@ -1,0 +1,241 @@
+---
+---
+
+<section class="s-hero" id="d2c_hero" style="position: relative; min-height: 85vh; display: flex; align-items: center; padding: 0; overflow: hidden; background-color: #0A374B;">
+  
+  <!-- Hero Background Wrapper -->
+  <div class="hero-bg-wrapper" style="position: absolute; inset: 0; z-index: 1;">
+    <img 
+      src="/assets/jobco-photos/House_with_attached_garage_driveway_2K_20260929115008.webp" 
+      alt="Paving Contractors for Bay Area Homes & Commercial Properties" 
+      style="width: 100%; height: 100%; object-fit: cover;"
+      loading="eager"
+      fetchpriority="high"
+    />
+    <!-- Background Overlay Gradient -->
+    <div class="hero-overlay" style="position: absolute; inset: 0; background: linear-gradient(90deg, rgba(10, 55, 75, 0.95) 0%, rgba(10, 55, 75, 0.7) 45%, rgba(10, 55, 75, 0) 75%);"></div>
+  </div>
+
+  <div class="m-container s-hero__container w-container hero-content-wrapper" style="position: relative; z-index: 10; padding: 60px 20px;">
+    <div class="hero-grid" style="display: grid; grid-template-columns: 1.15fr 0.85fr; gap: 48px; align-items: center;">
+      <!-- Left Column: Copy & Highlights -->
+      <div style="color: #FFFFFF; display: flex; flex-direction: column; gap: 18px;">
+        <!-- Eyebrow -->
+        <div style="display: inline-flex; align-items: center; gap: 10px;">
+          <span style="display: inline-block; width: 28px; height: 2px; background-color: #27A8E1;"></span>
+          <span class="subheadline" style="font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #27A8E1; font-weight: 700;">
+            TOP BAY AREA PAVING CONTRACTOR
+          </span>
+        </div>
+
+        <!-- H1 Headline -->
+        <h1 style="font-size: clamp(2.3rem, 4.2vw, 3.8rem); line-height: 1.15; color: #FFFFFF; margin: 0;">
+          Paving Contractors for Bay Area Homes &amp; Commercial Properties
+        </h1>
+
+        <!-- Subheadline -->
+        <p style="font-size: clamp(16px, 1.8vw, 18px); line-height: 1.6; color: rgba(244, 247, 249, 0.92); margin: 0;">
+          From driveways, patios, and pavers to parking lots, asphalt repair, striping, concrete, and drainage work, we provide the paving services your property needs.
+        </p>
+
+        <!-- Supporting Line -->
+        <p style="font-size: 16px; font-weight: 600; color: #27A8E1; margin: 0;">
+          Select your project type, tell us what needs attention, and get your free estimate today.
+        </p>
+      </div>
+
+      <!-- Right Column: Lead Form Card -->
+      <div id="lead-form" style="background: #FFFFFF; padding: 32px 28px; box-shadow: 0 20px 45px rgba(0,0,0,0.4); border-top: 5px solid #27A8E1;">
+        <div style="margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid #E2E8F0;">
+          <h2 style="font-size: 24px; color: #0A374B; margin: 0 0 4px 0;">Get Your Free Estimate</h2>
+          <p style="font-size: 14px; color: #64748B; margin: 0;">Get your free estimate for your home or commercial paving project.</p>
+        </div>
+
+        <form class="jobco-lead-form" data-landing="bay-area-paving-contractors" style="display: flex; flex-direction: column; gap: 14px;">
+          <!-- Selector: Two-option selector -->
+          <div>
+            <label style="display: block; font-size: 12px; font-weight: 700; color: #0A374B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 6px;">
+              I Need Paving For <span style="color: #EF4444;">*</span>
+            </label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <button 
+                type="button" 
+                class="type-toggle-btn active" 
+                data-value="Home"
+                style="padding: 10px; font-size: 14px; font-weight: 700; cursor: pointer; border: 2px solid #27A8E1; background: #0A374B; color: #FFFFFF;"
+              >
+                Home
+              </button>
+              <button 
+                type="button" 
+                class="type-toggle-btn" 
+                data-value="Commercial Property"
+                style="padding: 10px; font-size: 14px; font-weight: 700; cursor: pointer; border: 2px solid #CBD5E1; background: #F8FAFC; color: #0A374B;"
+              >
+                Commercial Property
+              </button>
+            </div>
+            <input type="hidden" name="property_type" value="Home" />
+          </div>
+
+          <!-- Full Name -->
+          <div>
+            <label for="hero-name" style="display: block; font-size: 12px; font-weight: 700; color: #0A374B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+              Full Name <span style="color: #EF4444;">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="hero-name" 
+              name="name" 
+              placeholder="Your full name" 
+              required 
+              class="form-control-jobco"
+            />
+          </div>
+
+          <!-- Phone & Email Row -->
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+            <div>
+              <label for="hero-phone" style="display: block; font-size: 12px; font-weight: 700; color: #0A374B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+                Phone Number <span style="color: #EF4444;">*</span>
+              </label>
+              <input 
+                type="tel" 
+                id="hero-phone" 
+                name="phone" 
+                placeholder="Best number to reach you" 
+                required 
+                class="form-control-jobco"
+              />
+            </div>
+            <div>
+              <label for="hero-email" style="display: block; font-size: 12px; font-weight: 700; color: #0A374B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+                Email <span style="color: #EF4444;">*</span>
+              </label>
+              <input 
+                type="email" 
+                id="hero-email" 
+                name="email" 
+                placeholder="Your email address" 
+                required 
+                class="form-control-jobco"
+              />
+            </div>
+          </div>
+
+          <!-- ZIP Code -->
+          <div>
+            <label for="hero-zip" style="display: block; font-size: 12px; font-weight: 700; color: #0A374B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+              ZIP Code <span style="color: #EF4444;">*</span>
+            </label>
+            <input 
+              type="text" 
+              id="hero-zip" 
+              name="zip" 
+              placeholder="Project ZIP code" 
+              required 
+              class="form-control-jobco"
+            />
+          </div>
+
+          <!-- Message -->
+          <div>
+            <label for="hero-msg" style="display: block; font-size: 12px; font-weight: 700; color: #0A374B; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px;">
+              Message <span style="color: #EF4444;">*</span>
+            </label>
+            <textarea 
+              id="hero-msg" 
+              name="message" 
+              rows="3" 
+              placeholder="Tell us what work you need" 
+              required 
+              class="form-control-jobco"
+              style="resize: vertical;"
+            ></textarea>
+          </div>
+
+          <!-- Submit Button -->
+          <button 
+            type="submit" 
+            class="btn-jobco btn-jobco-primary"
+            style="width: 100%; padding: 16px 20px; font-size: 15px; margin-top: 4px;"
+          >
+            Get Your Free Estimate
+          </button>
+
+          <!-- Microcopy -->
+          <p style="font-size: 12px; color: #64748B; text-align: center; margin: 2px 0 0 0;">
+            No obligation. We use your details to review your project request.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  @media (max-width: 991px) {
+    .hero-grid {
+      grid-template-columns: 1fr !important;
+      gap: 40px !important;
+    }
+    
+    /* Mobile Hero Split Layout: Image on top, Text below */
+    .s-hero {
+      display: block !important;
+      min-height: auto !important;
+    }
+    .hero-bg-wrapper {
+      position: relative !important;
+      height: 380px !important;
+      width: 100%;
+    }
+    .hero-overlay {
+      background: linear-gradient(180deg, rgba(10,55,75,0) 30%, #0A374B 100%) !important;
+    }
+    .hero-content-wrapper {
+      padding-top: 10px !important;
+      padding-bottom: 60px !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggleBtns = document.querySelectorAll('.type-toggle-btn');
+    const propertyTypeInput = document.querySelector('input[name="property_type"]');
+
+    toggleBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        toggleBtns.forEach(b => {
+          b.classList.remove('active');
+          b.style.border = '2px solid #CBD5E1';
+          b.style.background = '#F8FAFC';
+          b.style.color = '#0A374B';
+        });
+        this.classList.add('active');
+        this.style.border = '2px solid #27A8E1';
+        this.style.background = '#0A374B';
+        this.style.color = '#FFFFFF';
+        if (propertyTypeInput) {
+          propertyTypeInput.value = this.getAttribute('data-value');
+        }
+      });
+    });
+
+    const leadForm = document.querySelector('.jobco-lead-form');
+    if (leadForm) {
+      leadForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const submitBtn = leadForm.querySelector('button[type="submit"]');
+        if (submitBtn) {
+          submitBtn.disabled = true;
+          submitBtn.innerText = 'Submitting Request...';
+        }
+        setTimeout(() => {
+          window.location.href = '/thank-you/';
+        }, 600);
+      });
+    }
+  });
+</script>

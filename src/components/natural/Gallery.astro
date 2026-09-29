@@ -1,0 +1,231 @@
+---
+const galleryItems = [
+  {
+    title: "Residential Driveway Paving & Replacement",
+    location: "San Leandro, CA",
+    image: "/assets/jobco-photos/Projects-JobCo-7-scaled.jpg"
+  },
+  {
+    title: "Commercial Asphalt Paving & Roadways",
+    location: "Oakland, CA",
+    image: "/assets/jobco-photos/Projects-JobCo-19-scaled.jpg"
+  },
+  {
+    title: "Custom Pavers, Patios & Walkways",
+    location: "Fremont, CA",
+    image: "/assets/jobco-photos/Projects-JobCo-27.jpg"
+  },
+  {
+    title: "Precision Asphalt Compaction & Laydown",
+    location: "San Jose, CA",
+    image: "/assets/jobco-photos/JobCo-Work-31.jpg"
+  },
+  {
+    title: "Commercial Parking Lot Striping & Markings",
+    location: "Walnut Creek, CA",
+    image: "/assets/jobco-photos/Projects-JobCo-21-scaled.jpg"
+  },
+  {
+    title: "Commercial Concrete & Drainage Work",
+    location: "Hayward, CA",
+    image: "/assets/jobco-photos/Projects-JobCo-22-scaled.jpg"
+  },
+  {
+    title: "Pavement Repair, Resurfacing & Sealcoating",
+    location: "Pleasanton, CA",
+    image: "/assets/jobco-photos/JobCo-Work-35.jpg"
+  },
+  {
+    title: "Heavy Duty Commercial Surface Preparation",
+    location: "Richmond, CA",
+    image: "/assets/jobco-photos/Projects-JobCo-28-scaled.jpg"
+  }
+];
+---
+
+<section id="gallery" class="s-ideas-slider" style="background-color: #F4F7F9; position: relative; overflow: hidden; padding-top: 55px; padding-bottom: 55px;">
+  <div class="m-container s-ideas-slider__container w-container">
+    <div class="m-inner s-ideas-slider__inner">
+      <div class="s-ideas-slider__head" style="text-align: center; margin-bottom: 25px;">
+        <h2 class="m-first-heading s-ideas-slider__heading" style="opacity: 1; margin: 0;">See The Kind Of Work We Can Do For Your Property.</h2>
+      </div>
+      
+      <div class="s-ideas-slider__wr-gal" style="opacity: 1;">
+        <div class="s-ideas-slider__slider-cont swiper-container jobco-ideas-swiper" style="position: relative;">
+          <div class="s-ideas-slider__slider-wr swiper-wrapper">
+            {galleryItems.map((item, index) => (
+              <div class="s-ideas-slider__slider-item swiper-slide" data-slide-index={index}>
+                <div class="s-ideas-slider__in-slider-item" style="transition: transform 0.5s ease;">
+                  <div class="s-ideas-slider__wr-slider-img" style="position: relative; overflow: hidden;">
+                    <img loading="lazy" src={item.image} alt={item.title} class="s-ideas-slider__slider-img" style="width: 100%; height: 260px; object-fit: cover;">
+                  </div>
+                  <div class="s-ideas-slider__slider-item-link s-ideas-slider__slider-item-link_non-hover" style="text-align: center; margin-top: 15px; overflow: hidden; transition: max-height 0.4s ease;">
+                    <h3 class="s-ideas-slider__slider-item-heading without-after" style="margin-bottom: 5px; color: #0A374B;">{item.title}</h3>
+                    <p class="paragraph-3" style="color: #475569;">{item.location}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div class="bl-slider-btns">
+            <div class="bl-slider-btns__arrow bl-slider-btns__arrow_prev jobco-swiper-prev" role="button" tabindex="0" aria-label="Previous slide"></div>
+            <div class="bl-slider-btns__arrow bl-slider-btns__arrow_next jobco-swiper-next" role="button" tabindex="0" aria-label="Next slide"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .s-ideas-slider__slider-item {
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  .s-ideas-slider__slider-item.swiper-slide-active,
+  .s-ideas-slider__slider-item.swiper-slide-duplicate-active {
+    z-index: 2;
+    transform: scale(1);
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  /* Hide extreme slides (slides outside of prev/active/next) */
+  .s-ideas-slider__slider-item.swiper-slide:not(.swiper-slide-active):not(.swiper-slide-prev):not(.swiper-slide-next):not(.swiper-slide-duplicate-active):not(.swiper-slide-duplicate-prev):not(.swiper-slide-duplicate-next) {
+    opacity: 0 !important;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  .s-ideas-slider__slider-item.swiper-slide:not(.swiper-slide-active, .swiper-slide-duplicate-active),
+  .s-ideas-slider__slider-item.swiper-slide-duplicate:not(.swiper-slide-active, .swiper-slide-duplicate-active) {
+    transform: scale(.85);
+    opacity: .6;
+  }
+  @media (min-width: 768px) {
+    .s-ideas-slider__slider-item.swiper-slide.swiper-slide-prev .s-ideas-slider__in-slider-item,
+    .s-ideas-slider__slider-item.swiper-slide-duplicate-prev .s-ideas-slider__in-slider-item {
+      transform: translateX(35%);
+    }
+    .s-ideas-slider__slider-item.swiper-slide.swiper-slide-next .s-ideas-slider__in-slider-item,
+    .s-ideas-slider__slider-item.swiper-slide-duplicate-next .s-ideas-slider__in-slider-item {
+      transform: translateX(-35%);
+    }
+    .s-ideas-slider__slider-item.swiper-slide:not(.swiper-slide-active, .swiper-slide-duplicate-active) .s-ideas-slider__slider-item-link,
+    .s-ideas-slider__slider-item.swiper-slide-duplicate:not(.swiper-slide-active, .swiper-slide-duplicate-active) .s-ideas-slider__slider-item-link {
+      max-height: 0;
+      opacity: 0;
+    }
+    .s-ideas-slider__slider-item.swiper-slide.swiper-slide-active .s-ideas-slider__slider-item-link {
+      max-height: 100px;
+      opacity: 1;
+    }
+  }
+
+  .s-ideas-slider .bl-slider-btns {
+    position: absolute;
+    z-index: 10;
+    top: calc(var(--ideas-img-height, 350px) / 2);
+    left: 50%;
+    width: 85%;
+    max-width: 1200px;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+  }
+  .s-ideas-slider .bl-slider-btns__arrow {
+    position: absolute;
+    top: 50%;
+    width: 60px;
+    height: 60px;
+    transform: translateY(-50%);
+    border-radius: 50%;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 10%);
+    cursor: pointer;
+    pointer-events: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+  }
+  .s-ideas-slider .bl-slider-btns__arrow:hover {
+    background-color: #f1f5f9;
+  }
+  .s-ideas-slider .bl-slider-btns__arrow::after {
+    font-size: 30px;
+    color: #0A374B;
+    line-height: 1;
+  }
+  .s-ideas-slider .bl-slider-btns__arrow_prev {
+    left: 0;
+  }
+  .s-ideas-slider .bl-slider-btns__arrow_prev::after {
+    content: "←";
+  }
+  .s-ideas-slider .bl-slider-btns__arrow_next {
+    right: 0;
+  }
+  .s-ideas-slider .bl-slider-btns__arrow_next::after {
+    content: "→";
+  }
+
+  /* Override border radius strictly for images based on jobco standard */
+  .s-ideas-slider__slider-img {
+    border-radius: 0 !important;
+  }
+
+  @media (max-width: 991px) {
+    .s-ideas-slider {
+      padding-top: 50px !important;
+      padding-bottom: 50px !important;
+    }
+    .s-ideas-slider__slider-img {
+      height: 250px !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Calculate image height for arrows
+    const root = document.querySelector('.s-ideas-slider');
+    const ideasImgHeight = () => {
+      const wrap = root.querySelector('.s-ideas-slider__wr-slider-img');
+      if (wrap) {
+        root.style.setProperty('--ideas-img-height', `${wrap.offsetHeight}px`);
+      }
+    };
+    window.addEventListener('resize', ideasImgHeight);
+    ideasImgHeight();
+
+    // Initialize swiper
+    function initJobcoGallery() {
+      if (typeof Swiper === 'undefined') {
+        setTimeout(initJobcoGallery, 100);
+        return;
+      }
+      new Swiper('.jobco-ideas-swiper', {
+        slidesPerView: 1,
+        centeredSlides: true,
+        loop: true,
+        speed: 600,
+        autoplay: {
+          delay: 4500,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true
+        },
+        navigation: {
+          nextEl: '.jobco-swiper-next',
+          prevEl: '.jobco-swiper-prev'
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 0
+          }
+        }
+      });
+    }
+    initJobcoGallery();
+  });
+</script>

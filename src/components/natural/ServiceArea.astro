@@ -1,0 +1,56 @@
+---
+const cities = [
+  "San Leandro",
+  "Oakland",
+  "Fremont",
+  "San Jose",
+  "Walnut Creek",
+  "Hayward",
+  "Berkeley",
+  "Pleasanton",
+  "Alameda",
+  "Richmond",
+  "Union City",
+  "Castro Valley"
+];
+---
+
+<section id="service-area" class="s-service-area" style="padding: 85px 0; background-color: #FFFFFF; border-top: 1px solid #E2E8F0;">
+  <div class="m-container w-container" style="max-width: 1280px; margin: 0 auto; padding: 0 20px;">
+    <div style="max-width: 880px; margin: 0 auto; text-align: center;">
+      <!-- Eyebrow -->
+      <span class="subheadline" style="display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #27A8E1; font-weight: 700; margin-bottom: 8px;">
+        COVERAGE &amp; LOCATIONS
+      </span>
+
+      <!-- H2 -->
+      <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); color: #0A374B; margin: 0 0 18px 0;">
+        Serving Homes and Commercial Properties Across the Bay Area
+      </h2>
+
+      <!-- Body Copy -->
+      <p style="font-size: 17px; color: #475569; line-height: 1.65; margin: 0 0 36px 0;">
+        We serve San Leandro, Oakland, Fremont, San Jose, Walnut Creek, and surrounding Bay Area communities. Enter the project ZIP code in the form and we’ll confirm whether we can take on your project.
+      </p>
+
+      <!-- Cities Grid -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 14px; margin-bottom: 45px; text-align: left;">
+        {cities.map(city => (
+          <div style="background: #F8FAFC; border: 1px solid #E2E8F0; padding: 14px 18px; display: flex; align-items: center; gap: 10px; transition: border-color 0.2s, background-color 0.2s;">
+            <svg viewBox="0 0 24 24" width="16" height="16" fill="#27A8E1" style="flex-shrink: 0;">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            <span style="font-size: 15px; font-weight: 600; color: #0A374B;">{city}</span>
+          </div>
+        ))}
+      </div>
+
+      <!-- CTA Button -->
+      <div>
+        <a href="#lead-form" class="btn-jobco btn-jobco-primary" style="padding: 16px 36px;">
+          Get Your Free Estimate
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

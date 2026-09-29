@@ -1,0 +1,118 @@
+---
+const residentialServices = [
+  {
+    title: "Driveway Paving & Replacement",
+    image: "/assets/jobco-photos/jobco-real-residential-paving.jpg",
+  },
+  {
+    title: "Driveway Repair, Resurfacing & Sealcoating",
+    image: "/assets/jobco-photos/jobco-real-resurfacing-repair.jpg",
+  },
+  {
+    title: "Pavers, Concrete, Patios & Walkways",
+    image: "/assets/jobco-photos/jobco-real-pavers-walkways.jpg",
+  }
+];
+
+const commercialServices = [
+  {
+    title: "Asphalt Paving & Parking Lots",
+    image: "/assets/jobco-photos/jobco-real-commercial-parking.jpg",
+  },
+  {
+    title: "Striping, Pavement Markings & Maintenance",
+    image: "/assets/jobco-photos/jobco-real-commercial-striping.jpg",
+  },
+  {
+    title: "Concrete, Drainage, Masonry & Pathways",
+    image: "/assets/jobco-photos/Projects-JobCo-21-scaled.jpg",
+  }
+];
+---
+
+<section id="services" class="s-our-serv s-our-serv_landing" style="padding-top: 100px; padding-bottom: 80px;">
+  <div class="m-container s-our-serv__container w-container">
+    <div class="s-our-serv__head" style="padding: 0 20px;">
+      <h2 class="m-first-heading s-our-serv__heading" style="opacity: 1;">The Paving Work You’re Looking For, in One Place.</h2>
+      <p class="s-our-serv__head-text" style="opacity: 1;">Whether you are improving your home or managing a commercial property, we help you move the paving project forward with the service that fits the job.</p>
+    </div>
+    
+    <!-- Homes Section Title -->
+    <div class="services-subgroup-title">
+        <h3 class="m-third-heading">For Homes</h3>
+    </div>
+    <div class="s-our-serv__list" style="opacity: 1; margin-bottom: 60px;">
+      {residentialServices.map(service => (
+        <div class="s-our-serv__item">
+          <a href="#lead-form" class="s-our-serv__item-img-link w-inline-block">
+            <img loading="lazy" alt={service.title} src={service.image} class="s-our-serv__item-img" style="object-fit: cover; height: 100%; width: 100%;">
+          </a>
+          <a href="#lead-form" class="s-our-serv__item-heading-link w-inline-block">
+            <h3 class="m-fifth-heading s-our-serv__item-heading">{service.title}</h3>
+          </a>
+        </div>
+      ))}
+    </div>
+
+    <!-- Commercial Section Title -->
+    <div class="services-subgroup-title">
+        <h3 class="m-third-heading">For Commercial Properties</h3>
+    </div>
+    <div class="s-our-serv__list" style="opacity: 1;">
+      {commercialServices.map(service => (
+        <div class="s-our-serv__item">
+          <a href="#lead-form" class="s-our-serv__item-img-link w-inline-block">
+            <img loading="lazy" alt={service.title} src={service.image} class="s-our-serv__item-img" style="object-fit: cover; height: 100%; width: 100%;">
+          </a>
+          <a href="#lead-form" class="s-our-serv__item-heading-link w-inline-block">
+            <h3 class="m-fifth-heading s-our-serv__item-heading">{service.title}</h3>
+          </a>
+        </div>
+      ))}
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Premium Hover Effects for Service Cards */
+  .s-our-serv__item {
+    overflow: hidden; 
+  }
+  
+  .s-our-serv__item-img {
+    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1) !important;
+  }
+  
+  .s-our-serv__item:hover .s-our-serv__item-img {
+    transform: translate(-50%, -50%) scale(1.06) !important; 
+  }
+
+  .s-our-serv__item-heading {
+    transition: background-color 0.4s ease, color 0.4s ease !important;
+  }
+
+  .s-our-serv__item:hover .s-our-serv__item-heading {
+    background-color: #27A8E1 !important;
+    color: #FFFFFF !important;
+  }
+</style>
+
+<style>
+  .services-subgroup-title {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  @media (max-width: 991px) {
+    .s-our-serv__container {
+      padding-left: 20px !important;
+      padding-right: 20px !important;
+    }
+    .services-subgroup-title {
+      text-align: center !important;
+      padding: 0 20px !important;
+    }
+  }
+</style>

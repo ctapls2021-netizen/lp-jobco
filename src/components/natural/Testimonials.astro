@@ -1,0 +1,139 @@
+---
+const reviews = [
+  {
+    name: "Marie L.",
+    stars: "★★★★★",
+    role: "Verified Homeowner",
+    headline: "Excellent Workmanship and Outstanding Communication Throughout the Project.",
+    quote: "\u201cJOBCO Paving did an amazing job on our driveway. They explained every step clearly, stayed on schedule, and the final result looks fantastic. You can tell they take pride in their work. Highly recommended.\u201d"
+  },
+  {
+    name: "Josh W.",
+    stars: "★★★★★",
+    role: "Verified Homeowner",
+    headline: "Fast, Professional Service and Remarkably Reliable Results",
+    quote: "\u201cWe hired JOBCO to replace our old asphalt driveway, and the difference is incredible. Their crew was punctual, respectful, and finished the job quicker than expected without cutting corners. Great value for the quality they provide.\u201d"
+  },
+  {
+    name: "Michael P.",
+    stars: "★★★★★",
+    role: "Verified Homeowner",
+    headline: "A Smooth, Hassle-Free Experience from Start to Finish",
+    quote: "\u201cFrom the initial quote to the final sealcoat, JOBCO Paving made everything easy. The team helped us choose the best solution for our budget and delivered a clean, durable driveway that instantly improved our property. We\u2019re very happy with the results.\u201d"
+  }
+];
+---
+
+<section id="reviews" style="padding: 80px 0; background-color: #0A374B; color: #FFFFFF; overflow: hidden; width: 100%; box-sizing: border-box;">
+
+  <!-- Section Header -->
+  <div style="max-width: 860px; margin: 0 auto 50px auto; padding: 0 24px; text-align: center; box-sizing: border-box;">
+    <span style="display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #27A8E1; font-weight: 700; margin-bottom: 8px;">
+      CLIENT FEEDBACK
+    </span>
+    <h2 style="font-size: clamp(1.8rem, 5vw, 3rem); color: #FFFFFF; margin: 0 0 16px 0; line-height: 1.2;">
+      Why Property Owners Trust Us
+    </h2>
+    <p style="font-size: 17px; color: rgba(244, 247, 249, 0.88); line-height: 1.6; margin: 0;">
+      Clear communication, dependable crews, and work that improves the property are what clients value most. Here is what homeowners shared about working with us.
+    </p>
+  </div>
+
+  <!-- Mobile: Swiper (hidden on desktop via CSS) -->
+  <div id="testi-mobile-wrap" style="width: 100%; overflow: hidden; padding: 0 20px; box-sizing: border-box;">
+    <div class="swiper testi-mobile-swiper">
+      <div class="swiper-wrapper">
+        {reviews.map(rev => (
+          <div class="swiper-slide" style="box-sizing: border-box;">
+            <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 28px 20px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 10px; box-sizing: border-box;">
+              <strong style="font-size: 18px; color: #FFFFFF;">{rev.name}</strong>
+              <span style="font-size: 13px; color: #27A8E1; font-weight: 600;">{rev.role}</span>
+              <div style="color: #27A8E1; font-size: 18px; letter-spacing: 2px;">{rev.stars}</div>
+              <h3 style="font-size: 17px; line-height: 1.4; color: #FFFFFF; margin: 0;">{rev.headline}</h3>
+              <p style="font-size: 15px; line-height: 1.65; color: rgba(244,247,249,0.85); margin: 0; font-style: italic;">{rev.quote}</p>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  </div>
+
+  <!-- Desktop: Static Grid (hidden on mobile via CSS) -->
+  <div id="testi-desktop-wrap" style="max-width: 1280px; margin: 0 auto; padding: 0 20px; box-sizing: border-box;">
+    <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px;">
+      {reviews.map(rev => (
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.14); padding: 32px 24px; text-align: center; display: flex; flex-direction: column; align-items: center; gap: 12px; box-sizing: border-box;">
+          <strong style="font-size: 18px; color: #FFFFFF;">{rev.name}</strong>
+          <span style="font-size: 13px; color: #27A8E1; font-weight: 600;">{rev.role}</span>
+          <div style="color: #27A8E1; font-size: 18px; letter-spacing: 2px;">{rev.stars}</div>
+          <h3 style="font-size: 17px; line-height: 1.4; color: #FFFFFF; margin: 0;">{rev.headline}</h3>
+          <p style="font-size: 15px; line-height: 1.65; color: rgba(244,247,249,0.85); margin: 0; font-style: italic;">{rev.quote}</p>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <!-- CTA Button -->
+  <div style="text-align: center; margin-top: 50px; padding: 0 24px; box-sizing: border-box;">
+    <a href="#lead-form" class="btn-jobco btn-jobco-primary" style="padding: 16px 36px;">
+      Get Your Free Estimate
+    </a>
+  </div>
+
+</section>
+
+<style is:global>
+  @media (min-width: 992px) {
+    #testi-desktop-wrap {
+      display: block !important;
+    }
+    #testi-mobile-wrap {
+      display: none !important;
+    }
+  }
+
+  @media (max-width: 991px) {
+    #testi-desktop-wrap {
+      display: none !important;
+    }
+    #testi-mobile-wrap {
+      display: block !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  (function () {
+    var swiperInstance = null;
+    
+    function initTestiSwiper() {
+      if (window.innerWidth < 992) {
+        if (typeof Swiper === 'undefined') {
+          setTimeout(initTestiSwiper, 150);
+          return;
+        }
+        if (!swiperInstance) {
+          swiperInstance = new Swiper('.testi-mobile-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: true,
+            autoplay: { delay: 3500, disableOnInteraction: false },
+            allowTouchMove: true,
+          });
+        }
+      } else {
+        if (swiperInstance) {
+          swiperInstance.destroy(true, true);
+          swiperInstance = null;
+        }
+      }
+    }
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initTestiSwiper);
+    } else {
+      initTestiSwiper();
+    }
+    window.addEventListener('resize', initTestiSwiper);
+  })();
+</script>

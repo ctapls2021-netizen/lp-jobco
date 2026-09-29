@@ -1,0 +1,70 @@
+---
+const faqs = [
+  {
+    q: "Do you work on both homes and commercial properties?",
+    a: "Yes. We work on driveway, patio, walkway, paver, concrete, and related home projects as well as commercial asphalt, parking-lot, striping, concrete, drainage, masonry, and pathway work. Select the project type in the form so we can route your estimate request correctly."
+  },
+  {
+    q: "What should I select in the form if I searched for paving contractors?",
+    a: "Select Home if the project is for your residence. Select Commercial Property if the work is for a business, HOA, apartment community, retail site, industrial property, school, facility, parking area, or other commercial location."
+  },
+  {
+    q: "How much does paving cost?",
+    a: "The estimate depends on the property type, current surface condition, access, preparation, material, grading, drainage, and project size. Complete the form for a free estimate based on the work you need."
+  },
+  {
+    q: "Can you repair existing asphalt instead of replacing it?",
+    a: "We provide repairs, patching, resurfacing, and sealcoating as well as new paving. Tell us what needs attention, and we’ll review the appropriate next step for the property."
+  },
+  {
+    q: "Do you serve my area?",
+    a: "We serve the San Francisco Bay Area. Enter the project ZIP code in the form, and we’ll confirm availability."
+  }
+];
+---
+
+<section id="faq" class="s-faq-section" style="padding: 85px 0; background-color: #F8FAFC; border-top: 1px solid #E2E8F0;">
+  <div class="m-container w-container" style="max-width: 960px; margin: 0 auto; padding: 0 20px;">
+    <!-- Section Heading -->
+    <div style="text-align: center; margin-bottom: 45px;">
+      <span class="subheadline" style="display: block; font-size: 14px; text-transform: uppercase; letter-spacing: 0.12em; color: #27A8E1; font-weight: 700; margin-bottom: 8px;">
+        QUESTIONS &amp; ANSWERS
+      </span>
+      <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); color: #0A374B; margin: 0;">
+        Frequently Asked Questions
+      </h2>
+    </div>
+
+    <!-- Accordion List -->
+    <div style="display: flex; flex-direction: column; gap: 16px;">
+      {faqs.map((faq, index) => (
+        <details 
+          class="faq-accordion-item" 
+          open={index === 0}
+          style="background: #FFFFFF; border: 1px solid #E2E8F0; overflow: hidden; transition: all 0.2s;"
+        >
+          <summary style="padding: 22px 26px; font-family: var(--font-secondary); font-size: 19px; color: #0A374B; font-weight: 600; cursor: pointer; display: flex; justify-content: space-between; align-items: center; list-style: none; user-select: none;">
+            <span>{faq.q}</span>
+            <span class="faq-icon" style="color: #27A8E1; font-size: 24px; font-weight: 400; transition: transform 0.2s; margin-left: 16px; flex-shrink: 0;">+</span>
+          </summary>
+          <div style="padding: 0 26px 22px 26px; color: #475569; font-size: 16px; line-height: 1.65; border-top: 1px solid #F1F5F9; margin-top: 8px; padding-top: 16px;">
+            <p style="margin: 0;">{faq.a}</p>
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  details[open] summary .faq-icon {
+    transform: rotate(45deg);
+  }
+  summary::-webkit-details-marker {
+    display: none;
+  }
+  .faq-accordion-item[open] {
+    border-color: #27A8E1 !important;
+    box-shadow: 0 4px 15px rgba(39, 168, 225, 0.08);
+  }
+</style>
