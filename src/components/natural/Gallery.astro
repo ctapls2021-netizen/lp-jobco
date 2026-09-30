@@ -57,7 +57,7 @@ const galleryItems = [
               <div class="s-ideas-slider__slider-item swiper-slide" data-slide-index={index}>
                 <div class="s-ideas-slider__in-slider-item" style="transition: transform 0.5s ease;">
                   <div class="s-ideas-slider__wr-slider-img" style="position: relative; overflow: hidden;">
-                    <img loading="lazy" src={item.image} alt={item.title} class="s-ideas-slider__slider-img" style="width: 100%; height: 260px; object-fit: cover;">
+                    <img loading="lazy" src={item.image} alt={item.title} class="s-ideas-slider__slider-img" style="width: 100%; height: 450px; object-fit: cover;">
                   </div>
                   <div class="s-ideas-slider__slider-item-link s-ideas-slider__slider-item-link_non-hover" style="text-align: center; margin-top: 15px; overflow: hidden; transition: max-height 0.4s ease;">
                     <h3 class="s-ideas-slider__slider-item-heading without-after" style="margin-bottom: 5px; color: #0A374B;">{item.title}</h3>
@@ -117,7 +117,7 @@ const galleryItems = [
       opacity: 0;
     }
     .s-ideas-slider__slider-item.swiper-slide.swiper-slide-active .s-ideas-slider__slider-item-link {
-      max-height: 100px;
+      max-height: 200px;
       opacity: 1;
     }
   }
@@ -125,7 +125,7 @@ const galleryItems = [
   .s-ideas-slider .bl-slider-btns {
     position: absolute;
     z-index: 10;
-    top: calc(var(--ideas-img-height, 350px) / 2);
+    top: calc(var(--ideas-img-height, 450px) / 2);
     left: 50%;
     width: 85%;
     max-width: 1200px;
@@ -180,7 +180,7 @@ const galleryItems = [
       padding-bottom: 50px !important;
     }
     .s-ideas-slider__slider-img {
-      height: 250px !important;
+      height: 350px !important;
     }
   }
 </style>
