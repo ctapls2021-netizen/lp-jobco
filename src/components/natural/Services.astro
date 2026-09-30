@@ -124,12 +124,38 @@ const commercialServices = [
 
   @media (max-width: 991px) {
     .s-our-serv__container {
-      padding-left: 20px !important;
-      padding-right: 20px !important;
+      padding-left: 15px !important;
+      padding-right: 15px !important;
     }
     .services-subgroup-title {
       text-align: center !important;
-      padding: 0 20px !important;
+      padding: 0 15px !important;
+    }
+
+    /* Mobile Grid for Services */
+    .s-our-serv__list {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 12px !important;
+    }
+
+    /* Move the 2nd (longest text) item to the bottom and span full width */
+    .s-our-serv__item {
+      height: 220px !important;
+    }
+    .s-our-serv__item:nth-child(1) { order: 1; }
+    .s-our-serv__item:nth-child(2) { order: 3; grid-column: span 2; margin-top: 4px; }
+    .s-our-serv__item:nth-child(3) { order: 2; }
+
+    /* Adjust padding and font size so two fit nicely side-by-side */
+    .s-our-serv__item-heading-link {
+      width: 90% !important;
+      bottom: 12px !important;
+    }
+    .s-our-serv__item-heading {
+      font-size: 13px !important;
+      padding: 10px 8px !important;
+      min-height: 60px !important;
     }
   }
 </style>
