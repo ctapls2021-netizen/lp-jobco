@@ -90,11 +90,23 @@ const commercialServices = [
 
   .s-our-serv__item-heading {
     transition: background-color 0.4s ease, color 0.4s ease !important;
+    width: 100%;
+    text-align: center;
   }
 
   .s-our-serv__item:hover .s-our-serv__item-heading {
     background-color: #27A8E1 !important;
     color: #FFFFFF !important;
+  }
+
+  /* Float the labels in the center without touching borders */
+  .s-our-serv__item-heading-link {
+    bottom: 24px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: 85% !important;
+    display: flex !important;
+    justify-content: center !important;
   }
 </style>
 

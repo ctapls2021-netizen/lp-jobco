@@ -40,6 +40,19 @@ const reviews = [
     </p>
   </div>
 
+  <!-- Logos Bar (Marquee on Mobile) -->
+  <div class="testi-logos-wrapper">
+    <div class="testi-logos-track">
+      <img src="/assets/logos/google.svg" alt="Google Reviews" class="testi-logo" loading="lazy" />
+      <img src="/assets/logos/yelp.svg" alt="Yelp Reviews" class="testi-logo" loading="lazy" />
+      <img src="/assets/logos/houzz.svg" alt="Houzz Reviews" class="testi-logo" loading="lazy" />
+      <!-- Duplicates for marquee effect on mobile -->
+      <img src="/assets/logos/google.svg" alt="Google Reviews" class="testi-logo mobile-dup" aria-hidden="true" loading="lazy" />
+      <img src="/assets/logos/yelp.svg" alt="Yelp Reviews" class="testi-logo mobile-dup" aria-hidden="true" loading="lazy" />
+      <img src="/assets/logos/houzz.svg" alt="Houzz Reviews" class="testi-logo mobile-dup" aria-hidden="true" loading="lazy" />
+    </div>
+  </div>
+
   <!-- Mobile: Swiper (hidden on desktop via CSS) -->
   <div id="testi-mobile-wrap" style="width: 100%; overflow: hidden; padding: 0 20px; box-sizing: border-box;">
     <div class="swiper testi-mobile-swiper">
@@ -82,6 +95,35 @@ const reviews = [
 </section>
 
 <style is:global>
+  .testi-logos-wrapper {
+    margin: 0 auto 50px auto;
+    max-width: 800px;
+    padding: 0 20px;
+    overflow: hidden; 
+  }
+
+  .testi-logos-track {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px;
+  }
+
+  .testi-logo {
+    height: 35px;
+    width: auto;
+    opacity: 0.85;
+    transition: opacity 0.3s;
+  }
+  
+  .testi-logo:hover {
+    opacity: 1;
+  }
+
+  .mobile-dup {
+    display: none;
+  }
+
   @media (min-width: 992px) {
     #testi-desktop-wrap {
       display: block !important;
@@ -97,6 +139,26 @@ const reviews = [
     }
     #testi-mobile-wrap {
       display: block !important;
+    }
+
+    .testi-logos-wrapper {
+      margin-bottom: 40px;
+    }
+
+    .testi-logos-track {
+      width: max-content;
+      justify-content: flex-start;
+      gap: 40px;
+      animation: marquee 12s linear infinite;
+    }
+
+    .mobile-dup {
+      display: block;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(calc(-50% - 20px)); }
     }
   }
 </style>
