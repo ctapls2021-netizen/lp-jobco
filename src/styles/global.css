@@ -274,3 +274,98 @@ textarea.form-control {
 .text-center {
   text-align: center;
 }
+/* Animated Button Component Styles */
+.animated-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  text-decoration: none !important;
+  border: none;
+  background: transparent;
+  padding: 0;
+  gap: 8px; /* Small gap between text and arrow */
+  transition: all 0.5s ease-in-out;
+  font-family: 'Instrument Sans', sans-serif;
+  border-radius: 0;
+}
+
+.animated-btn__text {
+  background-color: #27A8E1;
+  color: #FFFFFF !important;
+  padding: 16px 32px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 0 !important; /* Radio cero as requested */
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  text-transform: none;
+  height: 54px;
+}
+
+.animated-btn__icon-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: #27A8E1;
+  color: #FFFFFF;
+  width: 54px;
+  height: 54px;
+  border-radius: 50% !important; /* Arrow button can be round as requested */
+  transition: all 0.5s ease-in-out;
+  flex-shrink: 0;
+}
+
+/* On Hover */
+.animated-btn:hover .animated-btn__text,
+.animated-btn:hover .animated-btn__icon-wrapper {
+  background-color: #0A374B;
+  color: #FFFFFF !important;
+}
+
+.animated-btn__icon-1,
+.animated-btn__icon-2 {
+  position: absolute;
+  width: 22px;
+  height: 22px;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Initial state */
+.animated-btn__icon-1 {
+  transform: translateX(0); /* Centered */
+}
+.animated-btn__icon-2 {
+  transform: translateX(-40px); /* Hidden left */
+}
+
+/* Hover state */
+.animated-btn:hover .animated-btn__icon-1 {
+  transform: translateX(40px); /* Exits right */
+}
+.animated-btn:hover .animated-btn__icon-2 {
+  transform: translateX(0); /* Enters from left */
+}
+
+@media (max-width: 640px) {
+  .header-cta-btn .animated-btn__text {
+    padding: 12px 20px;
+    font-size: 14px;
+    height: 44px;
+  }
+  .header-cta-btn .animated-btn__icon-wrapper {
+    width: 44px;
+    height: 44px;
+  }
+  .header-cta-btn .animated-btn__icon-1,
+  .header-cta-btn .animated-btn__icon-2 {
+    width: 18px;
+    height: 18px;
+  }
+}
+
+.w-full { width: 100%; justify-content: center; } .mt-1 { margin-top: 4px; }
+
