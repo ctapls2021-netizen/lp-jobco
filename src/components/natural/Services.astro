@@ -175,6 +175,8 @@ const commercialServices = [
       height: auto !important;
       display: flex !important;
       flex-direction: column !important;
+      background-color: #FFFFFF !important;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06) !important;
     }
     .s-our-serv__item:nth-child(1) { order: 1; }
     .s-our-serv__item:nth-child(2) { order: 3; grid-column: span 2; margin-top: 4px; }
@@ -186,6 +188,7 @@ const commercialServices = [
       height: 140px !important;
       width: 100% !important;
       display: block !important;
+      margin: 0 !important;
     }
     .s-our-serv__item:nth-child(2) .s-our-serv__item-img-link {
       height: 180px !important;
@@ -195,16 +198,17 @@ const commercialServices = [
     .s-our-serv__item-heading-link {
       position: relative !important;
       width: 100% !important;
+      margin: 0 !important;
       bottom: auto !important;
       left: auto !important;
       transform: none !important;
       flex-grow: 1;
       display: flex !important;
       align-items: center !important;
-      justify-content: space-between !important;
-      background: #FFFFFF !important;
+      justify-content: center !important;
+      background: transparent !important;
       padding: 12px 14px !important;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08) !important;
+      box-shadow: none !important;
     }
     
     .s-our-serv__item-heading {
@@ -214,17 +218,17 @@ const commercialServices = [
       border: none !important;
       width: auto !important;
       height: auto !important;
-      text-align: left !important;
+      text-align: center !important;
       color: #0A374B !important;
       background: transparent !important;
     }
 
     .serv-text-wrap {
       flex: 1;
-      padding-right: 12px;
+      padding-right: 0 !important;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
+      align-items: center !important;
     }
 
     .serv-line {
@@ -232,18 +236,11 @@ const commercialServices = [
       width: 32px;
       height: 2px;
       background: #27A8E1;
-      margin-top: 8px;
+      margin: 8px auto 0 auto !important;
     }
 
     .serv-arrow {
-      display: flex !important;
-      align-items: center;
-      justify-content: center;
-      min-width: 28px;
-      height: 28px;
-      background: #E0F2FE;
-      border-radius: 50%;
-      flex-shrink: 0;
+      display: none !important;
     }
   }
 </style>
