@@ -302,6 +302,7 @@ textarea.form-control {
   transition: all 0.5s ease-in-out;
   text-transform: none;
   height: 54px;
+  border: 1px solid transparent;
 }
 
 .animated-btn__icon-wrapper {
@@ -317,6 +318,7 @@ textarea.form-control {
   border-radius: 50% !important; /* Arrow button can be round as requested */
   transition: all 0.5s ease-in-out;
   flex-shrink: 0;
+  border: 1px solid transparent;
 }
 
 /* On Hover */
@@ -324,6 +326,7 @@ textarea.form-control {
 .animated-btn:hover .animated-btn__icon-wrapper {
   background-color: #0A374B;
   color: #FFFFFF !important;
+  border-color: #FFFFFF;
 }
 
 .animated-btn__icon-1,
