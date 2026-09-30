@@ -33,7 +33,7 @@ const reviews = [
       CLIENT FEEDBACK
     </span>
     <h2 style="font-size: clamp(1.8rem, 5vw, 3rem); color: #FFFFFF; margin: 0 0 16px 0; line-height: 1.2;">
-      Why Property Owners Trust Us
+      Why Property Owners <br class="testi-mobile-br" />Trust Us
     </h2>
     <p style="font-size: 17px; color: rgba(244, 247, 249, 0.88); line-height: 1.6; margin: 0;">
       Clear communication, dependable crews, and work that improves the property are what clients value most. Here is what homeowners shared about working with us.
@@ -120,6 +120,10 @@ const reviews = [
     opacity: 1;
   }
 
+  .testi-mobile-br {
+    display: none;
+  }
+
   .mobile-dup {
     display: none;
   }
@@ -134,6 +138,9 @@ const reviews = [
   }
 
   @media (max-width: 991px) {
+    .testi-mobile-br {
+      display: block;
+    }
     #reviews {
       padding-top: 40px !important;
       padding-bottom: 40px !important;
