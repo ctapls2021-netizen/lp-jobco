@@ -354,6 +354,11 @@ textarea.form-control {
 }
 
 @media (max-width: 640px) {
+  .animated-btn__text {
+    justify-content: center !important;
+    text-align: center !important;
+    line-height: 1.25 !important;
+  }
   .header-cta-btn .animated-btn__text {
     padding: 12px 20px;
     font-size: 14px;

@@ -1,0 +1,217 @@
+---
+import AnimatedButton from '../AnimatedButton.astro';
+---
+
+<section class="jobco-video-showcase" style="background: #0A374B; color: #FFFFFF; padding: 80px 20px;">
+  <div class="m-container w-container" style="max-width: 1200px; margin: 0 auto;">
+    
+    <div style="text-align: center; max-width: 800px; margin: 0 auto 48px auto;">
+      <span style="display: inline-block; font-size: 13px; font-weight: 700; color: #27A8E1; text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 8px;">
+        REAL EQUIPMENT &amp; CREWS IN ACTION
+      </span>
+      <h2 style="font-size: clamp(2rem, 3.2vw, 2.75rem); color: #FFFFFF; margin: 0 0 16px 0; font-family: 'Cinzel', serif;">
+        See JOBCO On The Job
+      </h2>
+      <p style="font-size: 17px; line-height: 1.6; color: rgba(244, 247, 249, 0.9); margin: 0;">
+        From precision commercial paving to complete parking lot resurfacing and sealcoating, our experienced operators and heavy-duty machinery deliver flawless results on every project.
+      </p>
+    </div>
+
+    <!-- Videos: Grid on Desktop (min-width: 841px), Carousel on Mobile (max-width: 840px) -->
+    <div class="video-container-wrapper">
+      <div class="swiper-container jobco-videos-swiper">
+        <div class="swiper-wrapper video-grid-wrapper">
+          
+          <!-- Video 1: Commercial Asphalt Work -->
+          <div class="swiper-slide video-slide-item">
+            <div class="video-card" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); height: 100%;">
+              <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000000;">
+                <video 
+                  controls 
+                  preload="metadata" 
+                  poster="/assets/v2/unzipped/WhatsApp Image 2026-10-13 at 17.34.05 (2).jpeg"
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                >
+                  <source src="/assets/v2/jobco-video-1.mp4" type="video/mp4" />
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+              <div style="padding: 20px 24px;">
+                <div style="margin-bottom: 6px;">
+                  <span style="font-size: 13px; font-weight: 700; color: #27A8E1; text-transform: uppercase; letter-spacing: 0.08em;">Commercial Paving</span>
+                </div>
+                <h3 style="font-size: 18px; color: #FFFFFF; margin: 0 0 6px 0; font-weight: 700;">Parking Lot Paving &amp; Roll-Out</h3>
+                <p style="font-size: 14px; color: #CBD5E1; margin: 0; line-height: 1.5;">Heavy-duty asphalt paving and grading for commercial properties across the Bay Area.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Video 2: Sealcoat / Surface Application -->
+          <div class="swiper-slide video-slide-item">
+            <div class="video-card" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.12); border-radius: 8px; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.3); height: 100%;">
+              <div style="position: relative; width: 100%; aspect-ratio: 16/9; background: #000000;">
+                <video 
+                  controls 
+                  preload="metadata" 
+                  poster="/assets/v2/sealcoating-card.jpg"
+                  style="width: 100%; height: 100%; object-fit: cover;"
+                >
+                  <source src="/assets/v2/jobco-video-2.mp4" type="video/mp4" />
+                  Your browser does not support HTML5 video.
+                </video>
+              </div>
+              <div style="padding: 20px 24px;">
+                <div style="margin-bottom: 6px;">
+                  <span style="font-size: 13px; font-weight: 700; color: #27A8E1; text-transform: uppercase; letter-spacing: 0.08em;">Precision Sealcoat</span>
+                </div>
+                <h3 style="font-size: 18px; color: #FFFFFF; margin: 0 0 6px 0; font-weight: 700;">Commercial Sealcoating Application</h3>
+                <p style="font-size: 14px; color: #CBD5E1; margin: 0; line-height: 1.5;">Even protective sealcoating to prolong pavement lifespan, restore dark aesthetic and resist weathering.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Mobile-Only Navigation Arrows -->
+        <div class="video-slider-controls">
+          <button type="button" class="video-nav-arrow video-prev" aria-label="Previous Video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M15 18l-6-6 6-6"/>
+            </svg>
+          </button>
+          <div class="video-pagination-dots"></div>
+          <button type="button" class="video-nav-arrow video-next" aria-label="Next Video">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M9 18l6-6-6-6"/>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Banner CTA under video -->
+    <div style="margin-top: 48px; display: flex; justify-content: center;">
+      <AnimatedButton text="Schedule Your Free Project Inspection" href="#lead-form" />
+    </div>
+
+  </div>
+</section>
+
+<style>
+  /* Desktop Layout: Simple 2-column grid */
+  @media (min-width: 841px) {
+    .video-grid-wrapper {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 32px !important;
+      transform: none !important;
+    }
+    .video-slide-item {
+      width: 100% !important;
+      margin: 0 !important;
+    }
+    .video-slider-controls {
+      display: none !important;
+    }
+  }
+
+  /* Mobile Layout: Carousel with navigation arrows only (no auto-advance) */
+  @media (max-width: 840px) {
+    .jobco-video-showcase {
+      padding: 50px 16px !important;
+    }
+    .video-container-wrapper {
+      position: relative;
+      max-width: 520px;
+      margin: 0 auto;
+      overflow: hidden;
+    }
+    .jobco-videos-swiper {
+      width: 100%;
+      overflow: hidden;
+      position: relative;
+    }
+    .video-grid-wrapper {
+      display: flex !important;
+      transition-property: transform !important;
+      box-sizing: content-box;
+    }
+    .video-slide-item {
+      flex-shrink: 0 !important;
+      width: 100% !important;
+      height: auto !important;
+      position: relative;
+      transition-property: transform;
+    }
+    .video-slider-controls {
+      display: flex !important;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 24px;
+    }
+    .video-nav-arrow {
+      background-color: #27A8E1 !important;
+      color: #FFFFFF !important;
+      border: 2px solid #27A8E1 !important;
+      width: 48px !important;
+      height: 48px !important;
+      border-radius: 50% !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      cursor: pointer !important;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3) !important;
+      transition: all 0.2s ease !important;
+      padding: 0 !important;
+      outline: none !important;
+    }
+    .video-nav-arrow svg {
+      width: 22px !important;
+      height: 22px !important;
+      stroke: #FFFFFF !important;
+    }
+    .video-nav-arrow:active {
+      transform: scale(0.92);
+      background-color: #1a8fca !important;
+    }
+    .video-nav-arrow.swiper-button-disabled {
+      opacity: 0.3 !important;
+      cursor: not-allowed !important;
+      pointer-events: none !important;
+    }
+  }
+</style>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    let videoSwiperInstance = null;
+
+    function initVideoCarousel() {
+      const isMobile = window.innerWidth <= 840;
+
+      if (isMobile && !videoSwiperInstance) {
+        if (typeof Swiper !== 'undefined') {
+          videoSwiperInstance = new Swiper('.jobco-videos-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 16,
+            loop: false,
+            autoplay: false, // Strict: No auto movement, arrow only
+            navigation: {
+              nextEl: '.video-next',
+              prevEl: '.video-prev',
+            },
+          });
+        } else {
+          setTimeout(initVideoCarousel, 150);
+        }
+      } else if (!isMobile && videoSwiperInstance) {
+        videoSwiperInstance.destroy(true, true);
+        videoSwiperInstance = null;
+      }
+    }
+
+    initVideoCarousel();
+    window.addEventListener('resize', initVideoCarousel);
+  });
+</script>
